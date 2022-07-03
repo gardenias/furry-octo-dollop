@@ -3,13 +3,13 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <groupId>com.p</groupId>
-        <artifactId>p-parent</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <groupId>com.g.common</groupId>
+        <artifactId>g-stater-parent</artifactId>
+        <version>1.0.0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.p.quant</groupId>
+    <groupId>com.ladder.quant</groupId>
     <artifactId>quant-gateway-project</artifactId>
     <version>${revision}</version>
 
@@ -23,15 +23,12 @@
     <properties>
         <revision>0.0.1-SNAPSHOT</revision>
         <base.version>${revision}</base.version>
-
-        <IMAGE.BUILD.SKIP>true</IMAGE.BUILD.SKIP>
-        <java.ops.mem>-Xms512m -Xmx1g</java.ops.mem>
     </properties>
 
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>com.p.quant.endpoints</groupId>
+                <groupId>com.ladder.quant.endpoints</groupId>
                 <artifactId>endpoints-okx</artifactId>
                 <version>${base.version}</version>
             </dependency>

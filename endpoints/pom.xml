@@ -3,13 +3,13 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <groupId>com.p.quant</groupId>
+        <groupId>com.ladder.quant</groupId>
         <artifactId>quant-gateway-project</artifactId>
         <version>${revision}</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.p.quant.endpoints</groupId>
+    <groupId>com.ladder.quant.endpoints</groupId>
     <artifactId>endpoints</artifactId>
 
     <packaging>pom</packaging>

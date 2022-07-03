@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>apps</artifactId>
-        <groupId>com.p.quant</groupId>
+        <groupId>com.ladder.quant</groupId>
         <version>${revision}</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -16,7 +16,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.p.quant.endpoints</groupId>
+            <groupId>com.ladder.quant.endpoints</groupId>
             <artifactId>endpoints-okx</artifactId>
         </dependency>
     </dependencies>
