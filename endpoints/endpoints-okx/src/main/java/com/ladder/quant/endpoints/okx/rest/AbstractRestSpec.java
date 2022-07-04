@@ -1,6 +1,6 @@
 package com.ladder.quant.endpoints.okx.rest;
 
-import com.ladder.quant.endpoints.rest.HeadersProducer;
+import com.g.common.endpoints.core.rest.HeadersProducer;
 import org.springframework.web.reactive.function.client.WebClient;
 
 public abstract class AbstractRestSpec {

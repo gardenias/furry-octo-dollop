@@ -4,7 +4,7 @@ import com.ladder.quant.endpoints.okx.rest.market.BooksEndpoint;
 import com.ladder.quant.endpoints.okx.rest.market.CandlesEndpoint;
 import com.ladder.quant.endpoints.okx.rest.market.TickerEndpoint;
 import com.ladder.quant.endpoints.okx.rest.market.TickersEndpoint;
-import com.ladder.quant.endpoints.rest.HeadersProducer;
+import com.g.common.endpoints.core.rest.HeadersProducer;
 
 import lombok.extern.slf4j.Slf4j;
 

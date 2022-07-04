@@ -6,7 +6,7 @@ import com.ladder.quant.endpoints.okx.rest.pub.InstrumentsEndpoint;
 import com.ladder.quant.endpoints.okx.rest.pub.StatusEndpoint;
 import lombok.extern.slf4j.Slf4j;
 
-import com.ladder.quant.endpoints.rest.HeadersProducer;
+import com.g.common.endpoints.core.rest.HeadersProducer;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;

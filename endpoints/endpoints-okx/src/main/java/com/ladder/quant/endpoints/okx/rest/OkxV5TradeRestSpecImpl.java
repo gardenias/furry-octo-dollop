@@ -21,7 +21,7 @@ import com.ladder.quant.endpoints.okx.rest.trade.PendingOrdersEndpoint;
 import com.ladder.quant.endpoints.okx.rest.trade.PlaceOrderEndpoint;
 import com.ladder.quant.endpoints.okx.rest.trade.PlaceOrderEndpoint.PlaceOrderReq;
 import com.ladder.quant.endpoints.okx.rest.trade.PlaceOrderEndpoint.PlaceOrderResp;
-import com.ladder.quant.endpoints.rest.HeadersProducer;
+import com.g.common.endpoints.core.rest.HeadersProducer;
 
 import lombok.extern.slf4j.Slf4j;
 

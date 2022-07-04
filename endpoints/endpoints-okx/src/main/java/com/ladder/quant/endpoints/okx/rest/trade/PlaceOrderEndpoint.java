@@ -9,14 +9,14 @@ import lombok.experimental.Accessors;
 
 import com.ladder.quant.endpoints.okx.rest.trade.PlaceOrderEndpoint.PlaceOrderReq;
 import com.ladder.quant.endpoints.okx.rest.trade.PlaceOrderEndpoint.PlaceOrderResp;
-import com.ladder.quant.endpoints.rest.AbstractRESTEndpoint;
-import com.ladder.quant.endpoints.rest.HeadersProducer;
-import com.ladder.quant.endpoints.rest.Resp;
-import com.ladder.quant.endpoints.rest.SymbolReq;
+import com.g.common.endpoints.core.rest.AbstractRESTEndpoint;
+import com.g.common.endpoints.core.rest.HeadersProducer;
+import com.g.common.endpoints.core.rest.Resp;
+import com.g.common.endpoints.core.rest.SymbolReq;
 import org.springframework.http.HttpMethod;
 import org.springframework.web.reactive.function.client.WebClient;
 
-import com.ladder.common.base.json.JsonPrinter;
+import com.p.common.base.json.JsonPrinter;
 
 public class PlaceOrderEndpoint extends AbstractRESTEndpoint<PlaceOrderReq, PlaceOrderResp> {
 

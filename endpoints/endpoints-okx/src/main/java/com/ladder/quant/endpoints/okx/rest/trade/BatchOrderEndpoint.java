@@ -13,10 +13,10 @@ import com.ladder.quant.endpoints.okx.rest.trade.BatchOrderEndpoint.BatchOrderRe
 import com.ladder.quant.endpoints.okx.rest.trade.BatchOrderEndpoint.BatchOrderResp;
 import com.ladder.quant.endpoints.okx.rest.trade.PlaceOrderEndpoint.PlaceOrderReq;
 import com.ladder.quant.endpoints.okx.rest.trade.PlaceOrderEndpoint.PlaceOrderRespData;
-import com.ladder.quant.endpoints.rest.AbstractRESTEndpoint;
-import com.ladder.quant.endpoints.rest.HeadersProducer;
-import com.ladder.quant.endpoints.rest.Req;
-import com.ladder.quant.endpoints.rest.Resp;
+import com.g.common.endpoints.core.rest.AbstractRESTEndpoint;
+import com.g.common.endpoints.core.rest.HeadersProducer;
+import com.g.common.endpoints.core.rest.Req;
+import com.g.common.endpoints.core.rest.Resp;
 import org.springframework.http.HttpMethod;
 import org.springframework.web.reactive.function.client.WebClient;
 

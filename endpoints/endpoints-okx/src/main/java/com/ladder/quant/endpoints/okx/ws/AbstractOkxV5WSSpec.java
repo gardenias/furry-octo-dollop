@@ -2,8 +2,9 @@ package com.ladder.quant.endpoints.okx.ws;
 
 import java.time.Duration;
 
+import com.g.common.endpoints.core.ws.AbstractWebSocketClient;
+
 import com.ladder.quant.endpoints.okx.ws.args.Arg;
-import com.ladder.quant.endpoints.ws.AbstractWebSocketClient;
 import org.springframework.web.socket.WebSocketHandler;
 import reactor.core.Disposable;
 import reactor.core.publisher.Flux;

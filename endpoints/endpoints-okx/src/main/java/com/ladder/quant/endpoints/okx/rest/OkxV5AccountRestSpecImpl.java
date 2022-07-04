@@ -19,7 +19,7 @@ import com.ladder.quant.endpoints.okx.rest.account.SetLeverageEndpoint.SetLevera
 import com.ladder.quant.endpoints.okx.rest.account.SetPositionModeEndpoint;
 import com.ladder.quant.endpoints.okx.rest.account.SetPositionModeEndpoint.SetPositionModeReq;
 import com.ladder.quant.endpoints.okx.rest.account.SetPositionModeEndpoint.SetPositionModeResp;
-import com.ladder.quant.endpoints.rest.HeadersProducer;
+import com.g.common.endpoints.core.rest.HeadersProducer;
 
 import lombok.extern.slf4j.Slf4j;
 

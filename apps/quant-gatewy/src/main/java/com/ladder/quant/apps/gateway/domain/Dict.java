@@ -1,6 +1,6 @@
 package com.ladder.quant.apps.gateway.domain;
 
-import com.ladder.quant.endpoints.domain.IEnum;
+import com.g.common.endpoints.core.domain.IEnum;
 
 import lombok.Getter;
 

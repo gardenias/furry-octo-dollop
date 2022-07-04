@@ -5,7 +5,7 @@ import lombok.val;
 import com.jayway.jsonpath.JsonPath;
 import org.junit.jupiter.api.Test;
 
-import com.ladder.common.base.json.JsonPrinter;
+import com.p.common.base.json.JsonPrinter;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

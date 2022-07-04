@@ -5,12 +5,12 @@ import java.util.List;
 
 import com.ladder.quant.endpoints.okx.domain.Dict.InstType;
 import com.ladder.quant.endpoints.okx.domain.InstId;
-import com.ladder.quant.endpoints.rest.AbstractRESTEndpoint;
-import com.ladder.quant.endpoints.rest.HeadersProducer;
-import com.ladder.quant.endpoints.rest.Req;
-import com.ladder.quant.endpoints.rest.Resp;
+import com.g.common.endpoints.core.rest.AbstractRESTEndpoint;
+import com.g.common.endpoints.core.rest.HeadersProducer;
+import com.g.common.endpoints.core.rest.Req;
+import com.g.common.endpoints.core.rest.Resp;
 
-import com.ladder.common.base.json.JsonPrinter;
+import com.p.common.base.json.JsonPrinter;
 
 import lombok.Getter;
 import lombok.Setter;

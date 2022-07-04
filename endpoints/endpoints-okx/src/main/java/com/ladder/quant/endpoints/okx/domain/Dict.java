@@ -5,12 +5,13 @@ import java.util.HashMap;
 import java.util.Map;
 import javax.crypto.Mac;
 
+import com.g.common.endpoints.core.domain.IEnum;
+
 import com.ladder.quant.endpoints.okx.ws.args.ChannelType;
 import lombok.Getter;
 import org.apache.commons.codec.digest.HmacUtils;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.ladder.quant.endpoints.domain.IEnum;
 import org.springframework.util.Base64Utils;
 
 public interface Dict {
