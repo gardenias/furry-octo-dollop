@@ -4,12 +4,12 @@ import lombok.extern.slf4j.Slf4j;
 
 import com.alibaba.fastjson.JSONObject;
 import com.p.quant.endpoints.binance.common.BinanceSignatureProducer;
-import com.p.quant.endpoints.binance.rest1.account.spot.AccountInfoEndpoint.AccountInfoReq;
-import com.p.quant.endpoints.binance.rest1.account.spot.AccountInfoEndpoint.AccountInfoResp;
-import com.p.quant.endpoints.binance.rest1.market.OldTradeLookupEndpoint.OldTradeLookupReq;
-import com.p.quant.endpoints.binance.rest1.market.OldTradeLookupEndpoint.OldTradeLookupResp;
-import com.p.quant.endpoints.binance.rest1.market.RecentTradesListEndpoint.RecentTradesListReq;
-import com.p.quant.endpoints.binance.rest1.market.RecentTradesListEndpoint.RecentTradesListResp;
+import com.p.quant.endpoints.binance.rest.account.spot.AccountInfoEndpoint.AccountInfoReq;
+import com.p.quant.endpoints.binance.rest.account.spot.AccountInfoEndpoint.AccountInfoResp;
+import com.p.quant.endpoints.binance.rest.market.spot.OldTradeLookupEndpoint.OldTradeLookupReq;
+import com.p.quant.endpoints.binance.rest.market.spot.OldTradeLookupEndpoint.OldTradeLookupResp;
+import com.p.quant.endpoints.binance.rest.market.spot.RecentTradesListEndpoint.RecentTradesListReq;
+import com.p.quant.endpoints.binance.rest.market.spot.RecentTradesListEndpoint.RecentTradesListResp;
 import com.p.quant.endpoints.binance.spec.BinanceAccountRestSpec;
 import com.p.quant.endpoints.binance.spec.impl.BinanceAccountRestSpecImpl;
 import com.p.quant.endpoints.binance.spec.impl.BinanceMarketRestSpecImpl;

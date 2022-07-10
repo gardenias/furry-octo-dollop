@@ -10,7 +10,7 @@ import com.alibaba.fastjson.TypeReference;
 import com.g.common.endpoints.core.rest.Resp;
 import com.p.quant.endpoints.binance.common.SignatureProducer;
 import com.p.quant.endpoints.binance.enums.RequestType;
-import com.p.quant.endpoints.binance.rest1.utils.UrlBuilder;
+import com.p.quant.endpoints.binance.rest.utils.UrlBuilder;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;

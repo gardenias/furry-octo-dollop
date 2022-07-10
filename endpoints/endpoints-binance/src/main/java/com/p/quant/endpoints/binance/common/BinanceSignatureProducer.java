@@ -7,7 +7,7 @@ package com.p.quant.endpoints.binance.common;
 
 import com.p.quant.endpoints.binance.base.BinanceReq;
 import com.p.quant.endpoints.binance.enums.RequestType;
-import com.p.quant.endpoints.binance.rest1.utils.SignatureGenerator;
+import com.p.quant.endpoints.binance.rest.utils.SignatureGenerator;
 
 import lombok.SneakyThrows;
 

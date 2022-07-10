@@ -1,17 +1,15 @@
 package com.p.quant.endpoints.binance.spec.impl;
 
-import com.g.common.endpoints.core.rest.HeadersProducer;
-
 import com.google.common.collect.Maps;
 
 import com.p.quant.endpoints.binance.common.SignatureProducer;
-import com.p.quant.endpoints.binance.rest1.market.OldTradeLookupEndpoint;
-import com.p.quant.endpoints.binance.rest1.market.OldTradeLookupEndpoint.OldTradeLookupReq;
-import com.p.quant.endpoints.binance.rest1.market.OldTradeLookupEndpoint.OldTradeLookupResp;
+import com.p.quant.endpoints.binance.rest.market.spot.OldTradeLookupEndpoint;
+import com.p.quant.endpoints.binance.rest.market.spot.OldTradeLookupEndpoint.OldTradeLookupReq;
+import com.p.quant.endpoints.binance.rest.market.spot.OldTradeLookupEndpoint.OldTradeLookupResp;
 
-import com.p.quant.endpoints.binance.rest1.market.RecentTradesListEndpoint;
-import com.p.quant.endpoints.binance.rest1.market.RecentTradesListEndpoint.RecentTradesListReq;
-import com.p.quant.endpoints.binance.rest1.market.RecentTradesListEndpoint.RecentTradesListResp;
+import com.p.quant.endpoints.binance.rest.market.spot.RecentTradesListEndpoint;
+import com.p.quant.endpoints.binance.rest.market.spot.RecentTradesListEndpoint.RecentTradesListReq;
+import com.p.quant.endpoints.binance.rest.market.spot.RecentTradesListEndpoint.RecentTradesListResp;
 import com.p.quant.endpoints.binance.spec.AbstractRestSpec;
 import com.p.quant.endpoints.binance.spec.BinanceMarketRestSpec;
 
@@ -20,7 +18,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Flux;
-import reactor.core.publisher.Mono;
 
 import java.util.Map;
 

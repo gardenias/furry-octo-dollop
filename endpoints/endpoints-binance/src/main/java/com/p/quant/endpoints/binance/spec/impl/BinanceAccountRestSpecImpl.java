@@ -6,9 +6,9 @@ import com.p.quant.endpoints.binance.spec.BinanceAccountRestSpec;
 
 import lombok.extern.slf4j.Slf4j;
 
-import com.p.quant.endpoints.binance.rest1.account.spot.AccountInfoEndpoint;
-import com.p.quant.endpoints.binance.rest1.account.spot.AccountInfoEndpoint.AccountInfoReq;
-import com.p.quant.endpoints.binance.rest1.account.spot.AccountInfoEndpoint.AccountInfoResp;
+import com.p.quant.endpoints.binance.rest.account.spot.AccountInfoEndpoint;
+import com.p.quant.endpoints.binance.rest.account.spot.AccountInfoEndpoint.AccountInfoReq;
+import com.p.quant.endpoints.binance.rest.account.spot.AccountInfoEndpoint.AccountInfoResp;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
