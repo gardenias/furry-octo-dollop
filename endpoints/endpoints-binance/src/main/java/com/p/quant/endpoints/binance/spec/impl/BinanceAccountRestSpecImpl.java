@@ -26,7 +26,7 @@ public class BinanceAccountRestSpecImpl extends AbstractRestSpec implements Bina
     }
     @Override
     public Mono<AccountInfoResp> accountInfo(AccountInfoReq req) {
-        return accountInfoEndpoint.execGet(req, AccountInfoResp.class);
+        return accountInfoEndpoint.exec(req, AccountInfoResp.class);
         
     }
 

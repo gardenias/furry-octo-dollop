@@ -48,42 +48,52 @@ public class AbstractBinanceRESTEndpoint<T extends BinanceReq, K extends Resp> {
         this.requestType = requestType;
     }
 
+//    public Mono<K> exec(T req, Class<K> clazz, Object... uriVariables) {
+//        return this.body(this.method, req, uriVariables)
+//            .headers(this.signatureProducer.produceHeaders(req, requestType)).retrieve()
+//            .bodyToMono(clazz) .doOnError(WebClientResponseException.class, err -> {
+//            log.error("exec fail,response body：{}" , err.getResponseBodyAsString());
+//        }).retry(3L);
+//    }
     public Mono<K> exec(T req, Class<K> clazz, Object... uriVariables) {
-        return this.body(this.method, req, uriVariables).headers(this.signatureProducer.produceHeaders(req, requestType)).retrieve().bodyToMono(clazz).retry(3L);
-    }
-    public Mono<K> execGet(T req, Class<K> clazz, Object... uriVariables) {
         return  this.webClient.method(method).uri(buildUri(path,req), uriVariables).headers(this.signatureProducer.produceHeaders(req,
-            requestType)).retrieve().bodyToMono(clazz).retry(3L);
+            requestType)).retrieve().bodyToMono(clazz).doOnError(WebClientResponseException.class, err -> {
+            log.error("exec fail,response body：{}" , err.getResponseBodyAsString());
+        }).retry(3L);
     }
     private WebClient.RequestHeadersSpec<?> body(HttpMethod method, T req, Object... uriVariables) {
         WebClient.RequestBodySpec spec = this.webClient.method(method).uri(buildUri(path,req), uriVariables);
         return method != HttpMethod.GET && method != HttpMethod.DELETE && method != HttpMethod.HEAD && method != HttpMethod.OPTIONS ? spec.bodyValue(req) : spec;
     }
 
-    public Flux<K> execGetFlux(T req, Class<K> clazz, Object... uriVariables) {
+    public Flux<K> execFlux(T req, Class<K> clazz, Object... uriVariables) {
         return this.webClient.method(method).uri(buildUri(path, req), uriVariables)
             .headers(this.signatureProducer.produceHeaders(req,requestType)).retrieve().bodyToFlux(clazz)
             .doOnError(WebClientResponseException.class, err -> {
                 log.error("execGetFlux fail,response body：{}" , err.getResponseBodyAsString());
-            }).retry(3L); 
-          
-            
+            }).retry(3L);
     }
-
+    public Mono<String> execFluxString(T req, Object... uriVariables) {
+        return this.webClient.method(method).uri(buildUri(path, req), uriVariables)
+            .headers(this.signatureProducer.produceHeaders(req,requestType)).retrieve().bodyToMono(String.class)
+            .doOnError(WebClientResponseException.class, err -> {
+                log.error("execFluxString fail,response body：{}" , err.getResponseBodyAsString());
+            }).retry(3L);
+    }
     private  String buildUri( String path,T req) {
-        if (Objects.nonNull(req) ) {
-            Map<String,Object> parameters = JSONObject.parseObject(JSONObject.toJSONString(req), new TypeReference<Map<String,Object>>(){});
-            String queryString = UrlBuilder.joinQueryParameters(parameters);
-            StringBuilder sb = new StringBuilder(path);
-            sb.append('?').append(queryString);
-            if (RequestType.SIGNED.equals(requestType)) {
-                String signature = signatureProducer.generateSignature(queryString);
-                if (StringUtils.isNotBlank(signature)) {
-                    sb.append("&signature=").append(signature);
-                }
+    if (Objects.nonNull(req) ) {
+        Map<String,Object> parameters = JSONObject.parseObject(JSONObject.toJSONString(req), new TypeReference<Map<String,Object>>(){});
+        String queryString = UrlBuilder.joinQueryParameters(parameters);
+        StringBuilder sb = new StringBuilder(path);
+        sb.append('?').append(queryString);
+        if (RequestType.SIGNED.equals(requestType)) {
+            String signature = signatureProducer.generateSignature(queryString);
+            if (StringUtils.isNotBlank(signature)) {
+                sb.append("&signature=").append(signature);
             }
-            return sb.toString();
         }
-        return path;
+        return sb.toString();
     }
+    return path;
+}
 }
