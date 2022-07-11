@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration debug="false" status="warn">
+    <property name="CONSOLE_LOG_PATTERN" value="%m%n"/>
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+    <include resource="org/springframework/boot/logging/logback/console-appender.xml"/>
+
+    <statusListener class="ch.qos.logback.core.status.NopStatusListener"/>
+
+    <root level="INFO">
+        <appender-ref ref="CONSOLE"/>
+    </root>
+    <logger level="ERROR" name=" ch.qos.logback"/>
+    <logger level="DEBUG" name="reactor.netty.http.client"/>
+</Configuration>

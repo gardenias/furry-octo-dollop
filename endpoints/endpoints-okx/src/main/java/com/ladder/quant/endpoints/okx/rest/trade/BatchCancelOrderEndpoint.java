@@ -12,9 +12,9 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.ladder.quant.endpoints.okx.rest.trade.BatchCancelOrderEndpoint.BatchCancelReq;
 import com.ladder.quant.endpoints.okx.rest.trade.CancelOrderEndpoint.CancelReq;
 import com.ladder.quant.endpoints.okx.rest.trade.CancelOrderEndpoint.CancelResp;
-import com.g.common.endpoints.core.rest.AbstractRESTEndpoint;
-import com.g.common.endpoints.core.rest.HeadersProducer;
-import com.g.common.endpoints.core.rest.Req;
+import com.ladder.quant.endpoints.core.rest.AbstractRESTEndpoint;
+import com.ladder.quant.endpoints.core.rest.HeadersProducer;
+import com.ladder.quant.endpoints.core.rest.Req;
 import org.springframework.http.HttpMethod;
 import org.springframework.web.reactive.function.client.WebClient;
 

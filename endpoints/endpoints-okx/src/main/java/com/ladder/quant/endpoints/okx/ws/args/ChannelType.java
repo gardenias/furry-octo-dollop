@@ -6,7 +6,7 @@ import java.util.Map;
 import lombok.Getter;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.g.common.endpoints.core.domain.IEnum;
+import com.ladder.quant.endpoints.core.domain.IEnum;
 
 public interface ChannelType extends IEnum<String> {
 

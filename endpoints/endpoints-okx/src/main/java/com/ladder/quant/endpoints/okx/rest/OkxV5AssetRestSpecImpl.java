@@ -30,7 +30,7 @@ import com.ladder.quant.endpoints.okx.rest.asset.WithdrawalEndpoint.WithdrawalRe
 import com.ladder.quant.endpoints.okx.rest.asset.WithdrawalHisEndpoint;
 import com.ladder.quant.endpoints.okx.rest.asset.WithdrawalHisEndpoint.WithdrawalHisReq;
 import com.ladder.quant.endpoints.okx.rest.asset.WithdrawalHisEndpoint.WithdrawalHisResp;
-import com.g.common.endpoints.core.rest.HeadersProducer;
+import com.ladder.quant.endpoints.core.rest.HeadersProducer;
 
 import lombok.extern.slf4j.Slf4j;
 

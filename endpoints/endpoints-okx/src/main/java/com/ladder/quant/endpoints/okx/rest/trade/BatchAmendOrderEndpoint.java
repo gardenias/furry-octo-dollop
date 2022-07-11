@@ -11,10 +11,10 @@ import lombok.experimental.Delegate;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.ladder.quant.endpoints.okx.rest.trade.BatchAmendOrderEndpoint.BatchAmendOrderReq;
 import com.ladder.quant.endpoints.okx.rest.trade.BatchAmendOrderEndpoint.BatchAmendOrderResp;
-import com.g.common.endpoints.core.rest.AbstractRESTEndpoint;
-import com.g.common.endpoints.core.rest.HeadersProducer;
-import com.g.common.endpoints.core.rest.Req;
-import com.g.common.endpoints.core.rest.Resp;
+import com.ladder.quant.endpoints.core.rest.AbstractRESTEndpoint;
+import com.ladder.quant.endpoints.core.rest.HeadersProducer;
+import com.ladder.quant.endpoints.core.rest.Req;
+import com.ladder.quant.endpoints.core.rest.Resp;
 import org.springframework.http.HttpMethod;
 import org.springframework.web.reactive.function.client.WebClient;
 

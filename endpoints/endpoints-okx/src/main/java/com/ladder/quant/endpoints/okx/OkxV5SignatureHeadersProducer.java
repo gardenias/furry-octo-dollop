@@ -2,9 +2,9 @@ package com.ladder.quant.endpoints.okx;
 
 import java.util.function.Consumer;
 
-import com.g.common.endpoints.core.rest.HeadersProducer;
+import com.ladder.quant.endpoints.core.rest.HeadersProducer;
 
-import com.g.common.endpoints.core.rest.Req;
+import com.ladder.quant.endpoints.core.rest.Req;
 import com.p.common.base.SignatureUtils;
 
 import lombok.SneakyThrows;

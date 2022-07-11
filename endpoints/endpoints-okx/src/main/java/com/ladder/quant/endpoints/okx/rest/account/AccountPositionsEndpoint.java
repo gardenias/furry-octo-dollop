@@ -12,10 +12,10 @@ import lombok.experimental.Accessors;
 
 import com.ladder.quant.endpoints.okx.rest.account.AccountPositionsEndpoint.AccountPositionsReq;
 import com.ladder.quant.endpoints.okx.rest.account.AccountPositionsEndpoint.AccountPositionsResp;
-import com.g.common.endpoints.core.rest.AbstractRESTEndpoint;
-import com.g.common.endpoints.core.rest.HeadersProducer;
-import com.g.common.endpoints.core.rest.Req;
-import com.g.common.endpoints.core.rest.Resp;
+import com.ladder.quant.endpoints.core.rest.AbstractRESTEndpoint;
+import com.ladder.quant.endpoints.core.rest.HeadersProducer;
+import com.ladder.quant.endpoints.core.rest.Req;
+import com.ladder.quant.endpoints.core.rest.Resp;
 import org.springframework.http.HttpMethod;
 import org.springframework.web.reactive.function.client.WebClient;
 

@@ -5,10 +5,10 @@ import java.util.List;
 
 import com.ladder.quant.endpoints.okx.domain.Dict.InstType;
 import com.ladder.quant.endpoints.okx.domain.InstId;
-import com.g.common.endpoints.core.rest.AbstractRESTEndpoint;
-import com.g.common.endpoints.core.rest.HeadersProducer;
-import com.g.common.endpoints.core.rest.Req;
-import com.g.common.endpoints.core.rest.Resp;
+import com.ladder.quant.endpoints.core.rest.AbstractRESTEndpoint;
+import com.ladder.quant.endpoints.core.rest.HeadersProducer;
+import com.ladder.quant.endpoints.core.rest.Req;
+import com.ladder.quant.endpoints.core.rest.Resp;
 
 import com.p.common.base.json.JsonPrinter;
 

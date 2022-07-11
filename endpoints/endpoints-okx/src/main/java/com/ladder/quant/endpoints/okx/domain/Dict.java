@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 import javax.crypto.Mac;
 
-import com.g.common.endpoints.core.domain.IEnum;
+import com.ladder.quant.endpoints.core.domain.IEnum;
 
 import com.ladder.quant.endpoints.okx.ws.args.ChannelType;
 import lombok.Getter;

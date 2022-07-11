@@ -1,6 +1,6 @@
 package com.ladder.quant.endpoints.okx;
 
-import com.g.common.endpoints.core.ws.LoggingWebSocketHandler;
+import com.ladder.quant.endpoints.core.ws.LoggingWebSocketHandler;
 
 import com.ladder.quant.endpoints.okx.ws.OkxV5WSPrivateSpec;
 import com.ladder.quant.endpoints.okx.ws.OkxV5WSPublicSpec;

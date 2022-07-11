@@ -18,8 +18,8 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.g.common</groupId>
-            <artifactId>g-endpoints-core</artifactId>
+            <groupId>com.ladder.quant.endpoints</groupId>
+            <artifactId>endpoints-core</artifactId>
         </dependency>
 
     </dependencies>

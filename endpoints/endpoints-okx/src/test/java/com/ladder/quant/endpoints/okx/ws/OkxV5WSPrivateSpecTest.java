@@ -2,8 +2,8 @@ package com.ladder.quant.endpoints.okx.ws;
 
 import java.util.concurrent.TimeUnit;
 
-import com.g.common.endpoints.core.ws.DisruptorWebSocketHandler;
-import com.g.common.endpoints.core.ws.MessageWrapper;
+import com.ladder.quant.endpoints.core.ws.DisruptorWebSocketHandler;
+import com.ladder.quant.endpoints.core.ws.MessageWrapper;
 
 import com.ladder.quant.endpoints.okx.domain.Dict;
 

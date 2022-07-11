@@ -3,7 +3,7 @@ package com.ladder.quant.endpoints.okx.rest.account;
 import java.io.Serializable;
 import java.util.List;
 
-import com.g.common.endpoints.core.rest.AbstractRESTEndpoint;
+import com.ladder.quant.endpoints.core.rest.AbstractRESTEndpoint;
 
 import com.p.common.base.json.JsonPrinter;
 
@@ -14,9 +14,9 @@ import lombok.experimental.Accessors;
 
 import com.ladder.quant.endpoints.okx.rest.account.AccountBalanceEndpoint.AccountBalanceReq;
 import com.ladder.quant.endpoints.okx.rest.account.AccountBalanceEndpoint.AccountBalanceResp;
-import com.g.common.endpoints.core.rest.HeadersProducer;
-import com.g.common.endpoints.core.rest.Req;
-import com.g.common.endpoints.core.rest.Resp;
+import com.ladder.quant.endpoints.core.rest.HeadersProducer;
+import com.ladder.quant.endpoints.core.rest.Req;
+import com.ladder.quant.endpoints.core.rest.Resp;
 import org.springframework.http.HttpMethod;
 import org.springframework.web.reactive.function.client.WebClient;
 

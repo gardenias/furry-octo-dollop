@@ -2,7 +2,7 @@ package com.ladder.quant.endpoints.okx.ws;
 
 import java.time.Duration;
 
-import com.g.common.endpoints.core.ws.AbstractWebSocketClient;
+import com.ladder.quant.endpoints.core.ws.AbstractWebSocketClient;
 
 import com.ladder.quant.endpoints.okx.ws.args.Arg;
 import org.springframework.web.socket.WebSocketHandler;

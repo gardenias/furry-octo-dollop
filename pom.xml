@@ -32,6 +32,11 @@
                 <artifactId>endpoints-okx</artifactId>
                 <version>${base.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.ladder.quant.endpoints</groupId>
+                <artifactId>endpoints-core</artifactId>
+                <version>${base.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
     <dependencies>

@@ -2,7 +2,7 @@ package com.ladder.quant.endpoints.okx.ws;
 
 import java.util.concurrent.TimeUnit;
 
-import com.g.common.endpoints.core.ws.LoggingWebSocketHandler;
+import com.ladder.quant.endpoints.core.ws.LoggingWebSocketHandler;
 
 import com.ladder.quant.endpoints.okx.domain.Dict;
 import lombok.extern.slf4j.Slf4j;

@@ -5,7 +5,7 @@ import lombok.Getter;
 import lombok.val;
 import com.google.common.collect.Lists;
 
-import com.g.common.endpoints.core.domain.IEnum;
+import com.ladder.quant.endpoints.core.domain.IEnum;
 
 enum OpType implements IEnum<String> {
     SUB("subscribe"),
