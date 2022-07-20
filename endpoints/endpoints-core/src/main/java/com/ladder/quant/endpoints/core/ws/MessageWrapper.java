@@ -11,5 +11,5 @@ import org.springframework.web.socket.WebSocketMessage;
 @Getter
 public class MessageWrapper<T> implements Serializable {
 
-    private WebSocketMessage<T> message;
+  private WebSocketMessage<T> message;
 }

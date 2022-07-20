@@ -1,5 +1,7 @@
 package com.ladder.quant.endpoints.okx.rest;
 
+import reactor.core.publisher.Mono;
+
 import com.ladder.quant.endpoints.okx.rest.trade.AmendOrderEndpoint.AmendOrderReq;
 import com.ladder.quant.endpoints.okx.rest.trade.AmendOrderEndpoint.AmendOrderResp;
 import com.ladder.quant.endpoints.okx.rest.trade.BatchAmendOrderEndpoint.BatchAmendOrderReq;
@@ -25,33 +27,32 @@ import com.ladder.quant.endpoints.okx.rest.trade.PendingOrdersEndpoint.PendingOr
 import com.ladder.quant.endpoints.okx.rest.trade.PendingOrdersEndpoint.PendingOrdsResp;
 import com.ladder.quant.endpoints.okx.rest.trade.PlaceOrderEndpoint.PlaceOrderReq;
 import com.ladder.quant.endpoints.okx.rest.trade.PlaceOrderEndpoint.PlaceOrderResp;
-import reactor.core.publisher.Mono;
 
 public interface OkxV5TradeRestSpec {
 
-    Mono<AmendOrderResp> amendOrder(AmendOrderReq req);
+  Mono<AmendOrderResp> amendOrder(AmendOrderReq req);
 
-    Mono<BatchAmendOrderResp> batchAmendOrder(BatchAmendOrderReq req);
+  Mono<BatchAmendOrderResp> batchAmendOrder(BatchAmendOrderReq req);
 
-    Mono<CancelResp> batchCancelOrder(BatchCancelReq req);
+  Mono<CancelResp> batchCancelOrder(BatchCancelReq req);
 
-    Mono<BatchOrderResp> batchOrder(BatchOrderReq req);
+  Mono<BatchOrderResp> batchOrder(BatchOrderReq req);
 
-    Mono<CancelResp> cancelOrder(CancelReq req);
+  Mono<CancelResp> cancelOrder(CancelReq req);
 
-    Mono<ClosePositionResp> closePosition(ClosePositionReq req);
+  Mono<ClosePositionResp> closePosition(ClosePositionReq req);
 
-    Mono<FillsResp> fills(FillsReq req);
+  Mono<FillsResp> fills(FillsReq req);
 
-    Mono<FillsHistoryResp> fillsHistory(FillsHistoryReq req);
+  Mono<FillsHistoryResp> fillsHistory(FillsHistoryReq req);
 
-    Mono<OrderResp> getOrder(OrderReq req);
+  Mono<OrderResp> getOrder(OrderReq req);
 
-    Mono<OrdArchiveResp> orderArchive(OrdArchiveReq req);
+  Mono<OrdArchiveResp> orderArchive(OrdArchiveReq req);
 
-    Mono<OrdHisResp> orderHistory(OrdHisReq req);
+  Mono<OrdHisResp> orderHistory(OrdHisReq req);
 
-    Mono<PendingOrdsResp> pendingOrders(PendingOrdsReq req);
+  Mono<PendingOrdsResp> pendingOrders(PendingOrdsReq req);
 
-    Mono<PlaceOrderResp> placeOrder(PlaceOrderReq req);
+  Mono<PlaceOrderResp> placeOrder(PlaceOrderReq req);
 }

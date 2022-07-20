@@ -1,15 +1,14 @@
 package com.ladder.quant.endpoints.okx.domain;
 
-import com.p.common.base.StrType;
-
 import lombok.EqualsAndHashCode;
 import lombok.NonNull;
 
+import com.p.common.base.StrType;
 
 @EqualsAndHashCode(callSuper = true)
 public class InstId extends StrType {
 
-    public InstId(@NonNull String value) {
-        super(value);
-    }
+  public InstId(@NonNull String value) {
+    super(value);
+  }
 }

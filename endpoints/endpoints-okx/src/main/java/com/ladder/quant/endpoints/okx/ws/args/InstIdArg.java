@@ -13,5 +13,5 @@ import com.ladder.quant.endpoints.okx.domain.InstId;
 @EqualsAndHashCode(callSuper = true)
 public class InstIdArg extends Arg {
 
-    protected InstId instId;
+  protected InstId instId;
 }

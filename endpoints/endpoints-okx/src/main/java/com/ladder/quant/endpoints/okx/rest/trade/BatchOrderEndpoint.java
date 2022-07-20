@@ -9,42 +9,43 @@ import lombok.experimental.Accessors;
 import lombok.experimental.Delegate;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.ladder.quant.endpoints.okx.rest.trade.BatchOrderEndpoint.BatchOrderReq;
-import com.ladder.quant.endpoints.okx.rest.trade.BatchOrderEndpoint.BatchOrderResp;
-import com.ladder.quant.endpoints.okx.rest.trade.PlaceOrderEndpoint.PlaceOrderReq;
-import com.ladder.quant.endpoints.okx.rest.trade.PlaceOrderEndpoint.PlaceOrderRespData;
+import org.springframework.http.HttpMethod;
+import org.springframework.web.reactive.function.client.WebClient;
+
 import com.ladder.quant.endpoints.core.rest.AbstractRESTEndpoint;
 import com.ladder.quant.endpoints.core.rest.HeadersProducer;
 import com.ladder.quant.endpoints.core.rest.Req;
 import com.ladder.quant.endpoints.core.rest.Resp;
-import org.springframework.http.HttpMethod;
-import org.springframework.web.reactive.function.client.WebClient;
+import com.ladder.quant.endpoints.okx.rest.trade.BatchOrderEndpoint.BatchOrderReq;
+import com.ladder.quant.endpoints.okx.rest.trade.BatchOrderEndpoint.BatchOrderResp;
+import com.ladder.quant.endpoints.okx.rest.trade.PlaceOrderEndpoint.PlaceOrderReq;
+import com.ladder.quant.endpoints.okx.rest.trade.PlaceOrderEndpoint.PlaceOrderRespData;
 
 public class BatchOrderEndpoint extends AbstractRESTEndpoint<BatchOrderReq, BatchOrderResp> {
 
-    public BatchOrderEndpoint(WebClient webClient, HeadersProducer headersProducer) {
-        super(webClient, headersProducer, "/api/v5/trade/batch-orders", HttpMethod.POST);
-    }
+  public BatchOrderEndpoint(WebClient webClient, HeadersProducer headersProducer) {
+    super(webClient, headersProducer, "/api/v5/trade/batch-orders", HttpMethod.POST);
+  }
 
-    @Setter
-    @Getter
-    @Accessors(fluent = true, chain = true)
-    @ToString(callSuper = true)
-    public static class BatchOrderResp extends Resp {
+  @Setter
+  @Getter
+  @Accessors(fluent = true, chain = true)
+  @ToString(callSuper = true)
+  public static class BatchOrderResp extends Resp {
 
-        private List<PlaceOrderRespData> data;
-    }
+    private List<PlaceOrderRespData> data;
+  }
 
-    @Getter
-    @Setter
-    @Accessors(chain = true)
-    @ToString(callSuper = true)
-    public static class BatchOrderReq extends Req implements List<PlaceOrderReq> {
+  @Getter
+  @Setter
+  @Accessors(chain = true)
+  @ToString(callSuper = true)
+  public static class BatchOrderReq extends Req implements List<PlaceOrderReq> {
 
-        @Delegate
-        @JsonIgnore
-        private List<PlaceOrderReq> data;
+    @Delegate
+    @JsonIgnore
+    private List<PlaceOrderReq> data;
 
-    }
+  }
 
 }

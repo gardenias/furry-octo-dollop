@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication(scanBasePackages = {"com.ladder.quant.endpoints.okx"})
 public class Bootstrap {
 
-    public static void main(String[] args) {
-        SpringApplication.run(Bootstrap.class);
-    }
+  public static void main(String[] args) {
+    SpringApplication.run(Bootstrap.class);
+  }
 
 }

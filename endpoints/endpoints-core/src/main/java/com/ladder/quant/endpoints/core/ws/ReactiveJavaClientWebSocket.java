@@ -14,18 +14,18 @@ import reactor.core.publisher.Mono;
 @Slf4j
 public class ReactiveJavaClientWebSocket {
 
-    public static void main(String[] args) {
+  public static void main(String[] args) {
 
-        WebSocketClient client = new ReactorNettyWebSocketClient();
-        val uri = URI.create("wss://api.huobi.pro/ws");
-        client.execute(uri,
-                session ->
-                    session.send(Mono.just(session.textMessage("{\"sub\":\"market.btcusdt.bbo\",\"id\":\"2\"}")))
-                        .thenMany(session.receive()
-                            .map(WebSocketMessage::getPayloadAsText)
-                            .log())
-                        .then())
-            .block(Duration.ofSeconds(1L));
-    }
+    WebSocketClient client = new ReactorNettyWebSocketClient();
+    val uri = URI.create("wss://api.huobi.pro/ws");
+    client.execute(uri,
+        session ->
+          session.send(Mono.just(session.textMessage("{\"sub\":\"market.btcusdt.bbo\",\"id\":\"2\"}")))
+            .thenMany(session.receive()
+              .map(WebSocketMessage::getPayloadAsText)
+              .log())
+            .then())
+      .block(Duration.ofSeconds(1L));
+  }
 
 }

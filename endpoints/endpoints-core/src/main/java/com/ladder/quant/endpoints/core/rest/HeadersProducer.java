@@ -6,7 +6,7 @@ import org.springframework.http.HttpHeaders;
 
 public interface HeadersProducer {
 
-    HeadersProducer NON_OP_HEADERS_PRODUCER = new NonOpHeadersProducer();
+  HeadersProducer NON_OP_HEADERS_PRODUCER = new NonOpHeadersProducer();
 
-    Consumer<HttpHeaders> produce(Req req);
+  Consumer<HttpHeaders> produce(Req req);
 }

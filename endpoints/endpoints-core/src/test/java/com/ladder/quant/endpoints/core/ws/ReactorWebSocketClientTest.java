@@ -11,16 +11,16 @@ import reactor.core.publisher.Flux;
 @Slf4j
 class ReactorWebSocketClientTest {
 
-    @Test
-    void name() throws InterruptedException {
-        Flux<String> ws = Flux.fromIterable(Lists.newArrayList("A", "B", "C", "D"));
-        ws.doOnNext(s -> log.info("{}", s.toLowerCase())).subscribe(s -> log.info("{}", s));
+  @Test
+  void name() throws InterruptedException {
+    Flux<String> ws = Flux.fromIterable(Lists.newArrayList("A", "B", "C", "D"));
+    ws.doOnNext(s -> log.info("{}", s.toLowerCase())).subscribe(s -> log.info("{}", s));
 
-        TimeUnit.SECONDS.sleep(10);
+    TimeUnit.SECONDS.sleep(10);
 
-        ws.concatWithValues("F");
+    ws.concatWithValues("F");
 
-        TimeUnit.SECONDS.sleep(10);
+    TimeUnit.SECONDS.sleep(10);
 
-    }
+  }
 }

@@ -1,7 +1,6 @@
 package com.ladder.quant.endpoints.core.domain;
 
+public interface IEnum<T> {
 
-public interface IEnum <T>{
-
-    T getCode();
+  T getCode();
 }

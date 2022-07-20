@@ -7,5 +7,4 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/{platform}/spot")
 public class SpotRestResources {
 
-
 }

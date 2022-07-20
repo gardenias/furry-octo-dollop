@@ -9,16 +9,16 @@ import org.springframework.web.socket.handler.TextWebSocketHandler;
 
 public class LoggingWebSocketHandler extends TextWebSocketHandler {
 
-    private final Logger logger;
+  private final Logger logger;
 
-    public LoggingWebSocketHandler(Logger logger) {
-        this.logger = logger;
-    }
+  public LoggingWebSocketHandler(Logger logger) {
+    this.logger = logger;
+  }
 
-    @Override
-    public void handleTextMessage(@NonNull WebSocketSession session, @NonNull TextMessage message) {
-        if (logger.isDebugEnabled()) {
-            logger.debug("> {}", message.getPayload());
-        }
+  @Override
+  public void handleTextMessage(@NonNull WebSocketSession session, @NonNull TextMessage message) {
+    if (logger.isDebugEnabled()) {
+      logger.debug("> {}", message.getPayload());
     }
+  }
 }

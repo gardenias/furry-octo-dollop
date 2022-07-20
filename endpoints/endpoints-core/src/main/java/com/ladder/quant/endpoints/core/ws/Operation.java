@@ -7,5 +7,5 @@ import org.springframework.web.socket.WebSocketSession;
 @FunctionalInterface
 public interface Operation {
 
-    void attachTo(WebSocketSession socketSession) throws IOException;
+  void attachTo(WebSocketSession socketSession) throws IOException;
 }

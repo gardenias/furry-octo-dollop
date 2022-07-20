@@ -17,23 +17,23 @@ import com.fasterxml.jackson.annotation.JsonAnyGetter;
 @EqualsAndHashCode
 public class Arg {
 
-    @JsonAnyGetter
-    protected Map<String, Object> more;
+  @JsonAnyGetter
+  protected Map<String, Object> more;
 
-    public Arg set(@NonNull String key, Object value) {
-        if (value == null) {return this;}
+  public Arg set(@NonNull String key, Object value) {
+    if (value == null) {return this;}
 
-        if (more == null) {
-            more = new HashMap<>();
-        }
-
-        more.put(key, value);
-
-        return this;
+    if (more == null) {
+      more = new HashMap<>();
     }
 
-    @Override
-    public String toString() {
-        return ReflectionToStringBuilder.toString(this, ToStringStyle.JSON_STYLE);
-    }
+    more.put(key, value);
+
+    return this;
+  }
+
+  @Override
+  public String toString() {
+    return ReflectionToStringBuilder.toString(this, ToStringStyle.JSON_STYLE);
+  }
 }

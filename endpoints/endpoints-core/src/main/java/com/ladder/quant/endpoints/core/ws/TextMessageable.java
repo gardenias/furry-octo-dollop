@@ -5,6 +5,6 @@ import org.springframework.web.socket.TextMessage;
 
 public interface TextMessageable {
 
-    @JsonIgnore
-    TextMessage of();
+  @JsonIgnore
+  TextMessage of();
 }

@@ -7,17 +7,17 @@ import com.ladder.quant.endpoints.okx.domain.InstId;
 
 public interface OkxV5WSPublicSpec {
 
-    void subInstruments(InstType instType);
+  void subInstruments(InstType instType);
 
-    void ticker(InstId instId);
+  void ticker(InstId instId);
 
-    void candle(InstId instId, CandleType type);
+  void candle(InstId instId, CandleType type);
 
-    void trades(InstId instId);
+  void trades(InstId instId);
 
-    void fundingRate(InstId instId);
+  void fundingRate(InstId instId);
 
-    void status();
+  void status();
 
-    void books(InstId instId, BookType type);
+  void books(InstId instId, BookType type);
 }

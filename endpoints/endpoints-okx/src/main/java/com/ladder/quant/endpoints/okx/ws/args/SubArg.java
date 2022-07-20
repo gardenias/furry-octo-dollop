@@ -13,12 +13,12 @@ import com.ladder.quant.endpoints.okx.domain.Dict.InstType;
 @EqualsAndHashCode(callSuper = true)
 public class SubArg extends InstIdArg {
 
-    private ChannelType channel;
-    private InstType instType;
-    private String ccy;
+  private ChannelType channel;
+  private InstType instType;
+  private String ccy;
 
-    @Override
-    public String toString() {
-        return ReflectionToStringBuilder.toString(this, ToStringStyle.JSON_STYLE);
-    }
+  @Override
+  public String toString() {
+    return ReflectionToStringBuilder.toString(this, ToStringStyle.JSON_STYLE);
+  }
 }
