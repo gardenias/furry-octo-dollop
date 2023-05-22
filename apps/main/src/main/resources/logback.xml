@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+  <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+  <include resource="org/springframework/boot/logging/logback/console-appender.xml"/>
+
+  <logger name="com.g.fod.apps.main.bench.core.ReqExecWorkHandler" level="info"/>
+  <logger name="com.g.fod.apps.main.bench.context.HuobiMarketEventProducer" level="info"/>
+  <logger name="com.g.fod.apps.main.bench.context.UserContext" level="info"/>
+  <logger name="com.g.fod.apps.main.bench.core.ReqExecWorkHandler" level="info"/>
+  <logger name="org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator"
+          level="info"/>
+
+  <root level="INFO">
+    <appender-ref ref="CONSOLE"/>
+  </root>
+</Configuration>

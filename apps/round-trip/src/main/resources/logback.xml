@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+  <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+  <include resource="org/springframework/boot/logging/logback/console-appender.xml"/>
+
+  <logger name="com.g.fod.apps.rt" level="info"/>
+
+  <root level="error">
+    <appender-ref ref="CONSOLE"/>
+  </root>
+</Configuration>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <parent>
+    <groupId>com.g.fod</groupId>
+    <artifactId>furry-octo-dollop</artifactId>
+    <version>${revision}</version>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.g.fod.endpoints</groupId>
+  <artifactId>endpoints</artifactId>
+
+  <packaging>pom</packaging>
+  <modules>
+    <module>endpoints-okx</module>
+    <module>endpoints-binance</module>
+    <module>endpoints-huobi</module>
+    <module>endpoints-mexc</module>
+    <module>endpoints-x</module>
+  </modules>
+
+  <properties>
+    <maven.compiler.source>11</maven.compiler.source>
+    <maven.compiler.target>11</maven.compiler.target>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.g.fod</groupId>
+      <artifactId>openapi</artifactId>
+    </dependency>
+  </dependencies>
+</project>

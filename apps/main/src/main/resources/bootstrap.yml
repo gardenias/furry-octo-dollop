@@ -1,0 +1,74 @@
+APP_NAME: perf-test
+PROFILE: LOCAL
+ENV: test-1
+HOSTNAME: local
+
+logback.level.root: INFO
+spring.cloud.config.enabled: false
+
+statsd:
+  hostname: 10.228.3.48
+  port: 8125
+  enable: true
+
+info.app:
+  name: ${APP-NAME:app}
+  env: ${ENV:NOT_SET}
+  hostname: ${HOSTNAME:NOT_SET}
+
+http.exec.thread.size: 20
+x.api:
+  base-uri: http://10.228.3.93:8080
+  ws-uri: ws://10.10.3.3:8080/s/ws
+  users:
+    - uid: 100000000001
+      apiKey: 100000000001
+    - uid: 100000000002
+      apiKey: 100000000002
+    - uid: 100000000003
+      apiKey: 100000000003
+    - uid: 100000000004
+      apiKey: 100000000004
+    - uid: 100000000005
+      apiKey: 100000000005
+    - uid: 100000000006
+      apiKey: 100000000006
+    - uid: 100000000007
+      apiKey: 100000000007
+    - uid: 100000000008
+      apiKey: 100000000008
+    - uid: 100000000009
+      apiKey: 100000000009
+    - uid: 100000000010
+      apiKey: 100000000010
+    - uid: 100000000011
+      apiKey: 100000000011
+    - uid: 100000000012
+      apiKey: 100000000012
+    - uid: 100000000013
+      apiKey: 100000000013
+    - uid: 100000000014
+      apiKey: 100000000014
+    - uid: 100000000015
+      apiKey: 100000000015
+    - uid: 100000000016
+      apiKey: 100000000016
+    - uid: 100000000017
+      apiKey: 100000000017
+    - uid: 100000000018
+      apiKey: 100000000018
+    - uid: 100000000019
+      apiKey: 100000000019
+    - uid: 100000000020
+      apiKey: 100000000020
+
+market.source.hb:
+  enable: true
+  #  ws-host: wss://api.huobiasia.vip/ws
+  ws-host: wss://api.huobi.pro/ws
+  topic: market.filusdt.bbo,market.filusdt.trade.detail,market.linkusdt.bbo,market.linkusdt.trade.detail,market.bchusdt.bbo,market.bchusdt.trade.detail,market.btcusdt.bbo,market.btcusdt.trade.detail,market.ethusdt.bbo,market.ethusdt.trade.detail,market.uniusdt.trade.detail,market.uniusdt.bbo,market.sushiusdt.bbo,market.sushiusdt.trade.detail
+server:
+  port: 8081
+  undertow:
+    threads:
+      io:

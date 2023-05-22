@@ -1,0 +1,46 @@
+package com.g.fod.endpoints.binance.test.usd.model.market;
+
+import java.math.BigDecimal;
+
+import com.g.fod.endpoints.binance.test.usd.constant.BinanceApiConstants;
+
+import org.apache.commons.lang3.builder.ToStringBuilder;
+
+public class FundingRate {
+
+  private String symbol;
+
+  private BigDecimal fundingRate;
+
+  private Long fundingTime;
+
+  public String getSymbol() {
+    return symbol;
+  }
+
+  public void setSymbol(String symbol) {
+    this.symbol = symbol;
+  }
+
+  public BigDecimal getFundingRate() {
+    return fundingRate;
+  }
+
+  public void setFundingRate(BigDecimal fundingRate) {
+    this.fundingRate = fundingRate;
+  }
+
+  public Long getFundingTime() {
+    return fundingTime;
+  }
+
+  public void setFundingTime(Long fundingTime) {
+    this.fundingTime = fundingTime;
+  }
+
+  @Override
+  public String toString() {
+    return new ToStringBuilder(this, BinanceApiConstants.TO_STRING_BUILDER_STYLE).append("symbol", symbol)
+      .append("fundingRate", fundingRate).append("fundingTime", fundingTime).toString();
+  }
+}

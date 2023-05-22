@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <parent>
+    <groupId>com.g.common</groupId>
+    <artifactId>g-starter-parent</artifactId>
+    <version>1.0.1</version>
+    <relativePath/>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.g.fod</groupId>
+  <artifactId>furry-octo-dollop</artifactId>
+  <version>${revision}</version>
+
+  <packaging>pom</packaging>
+
+  <modules>
+    <module>apps</module>
+    <module>endpoints</module>
+    <module>openapi</module>
+  </modules>
+
+  <properties>
+    <revision>1.0.1-SNAPSHOT</revision>
+    <base.version>${revision}</base.version>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>com.g.fod.endpoints</groupId>
+        <artifactId>endpoints-okx</artifactId>
+        <version>${base.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.g.fod.endpoints</groupId>
+        <artifactId>endpoints-binance</artifactId>
+        <version>${base.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.g.fod.endpoints</groupId>
+        <artifactId>endpoints-huobi</artifactId>
+        <version>${base.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.g.fod.endpoints</groupId>
+        <artifactId>endpoints-mexc</artifactId>
+        <version>${base.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.g.fod.endpoints</groupId>
+        <artifactId>endpoints-x</artifactId>
+        <version>${base.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.g.fod</groupId>
+        <artifactId>openapi</artifactId>
+        <version>${base.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+  <dependencies>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.mockito</groupId>
+      <artifactId>mockito-core</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.assertj</groupId>
+      <artifactId>assertj-core</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>com.g.common</groupId>
+      <artifactId>g-endpoints-core</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.g.common</groupId>
+      <artifactId>g-common-base</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.datadoghq</groupId>
+      <artifactId>java-dogstatsd-client</artifactId>
+    </dependency>
+
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-deploy-plugin</artifactId>
+        <configuration>
+          <skip>true</skip>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>

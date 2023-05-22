@@ -1,0 +1,11 @@
+{
+  "channel": "push.personal.asset",
+  "data": {
+    "availableBalance": 0.7514236,
+    "bonus": 0,
+    "currency": "USDT",
+    "frozenBalance": 0,
+    "positionMargin": 0
+  },
+  "ts": 1610005070083
+}
