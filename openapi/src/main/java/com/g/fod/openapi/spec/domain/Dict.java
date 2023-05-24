@@ -6,18 +6,6 @@ import com.ladder.quant.endpoints.core.domain.IEnum;
 
 public interface Dict {
 
-  enum Platform implements IEnum<String> {
-
-    OKX,
-    BINANCE,
-    ;
-
-    @Override
-    public String getCode() {
-      return name();
-    }
-  }
-
   enum Direction implements IEnum<String> {
 
     LINEAR("linear"),
@@ -32,7 +20,7 @@ public interface Dict {
     }
   }
 
-  public enum InstType implements IEnum<String> {
+  enum InstType implements IEnum<String> {
     SPOT,
     MARGIN,
     SWAP,
