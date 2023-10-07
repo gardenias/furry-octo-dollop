@@ -28,8 +28,8 @@
 
   <dependencies>
     <dependency>
-      <groupId>com.g.fod</groupId>
-      <artifactId>openapi</artifactId>
+      <groupId>com.g.common</groupId>
+      <artifactId>g-cex-domain-obj-spec</artifactId>
     </dependency>
   </dependencies>
 </project>

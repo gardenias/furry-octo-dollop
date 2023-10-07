@@ -19,7 +19,6 @@
   <modules>
     <module>apps</module>
     <module>endpoints</module>
-    <module>openapi</module>
   </modules>
 
   <properties>

@@ -7,7 +7,7 @@ import lombok.Getter;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 
-import com.ladder.quant.endpoints.core.domain.IEnum;
+import com.g.fod.openapi.spec.domain.IEnum;
 
 public interface ChannelType extends IEnum<String> {
 

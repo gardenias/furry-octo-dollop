@@ -6,13 +6,16 @@ import java.util.Map;
 import javax.crypto.Mac;
 
 import com.g.fod.endpoints.okx.ws.args.ChannelType;
+import com.g.fod.openapi.spec.domain.IEnum;
+
 import lombok.Getter;
+import lombok.val;
 import org.apache.commons.codec.digest.HmacUtils;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import org.springframework.util.Base64Utils;
 
-import com.ladder.quant.endpoints.core.domain.IEnum;
+
 
 public interface Dict {
 
@@ -20,7 +23,8 @@ public interface Dict {
   String V5_WS_PUBLIC = "wss://ws.okx.com:8443/ws/v5/public";
 
   static String signature(String inputStr, Mac mac) {
-    return Base64Utils.encodeToString(mac.doFinal(inputStr.getBytes(StandardCharsets.UTF_8)));
+    val bytes = mac.doFinal(inputStr.getBytes(StandardCharsets.UTF_8));
+    return Base64Utils.encodeToString(bytes);
   }
 
   static Mac sha256(String sec) {
